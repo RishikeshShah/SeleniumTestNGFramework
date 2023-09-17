@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+	 <listeners>
+    <!-- generate html report from library ReportNG-->
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+     <!-- takes screenshot on failure of test case-->
+    <listener class-name="common.Listner" />
+     <!-- retry test case 3 times, in case test fails-->
+    <listener class-name="common.RetryListner" />    
+   </listeners>
+  <test name="Test">
+    <classes>
+      <class name="common.BaseClass"/>
+      <class name="testCase.MyTestcases"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
